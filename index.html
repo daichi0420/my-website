@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team D 社内ポータル</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+  <header>
+    <div class="header-box">
+      <h1>Free Will</h1>
+      <h2>Team D社内ポータル</h2>
+      <nav>
+        
+          <ul>
+              <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+              <li><a href="#contact"><i class="fas fa-envelope"></i> Contact Info</a></li>
+              <li><a href="#files"><i class="fas fa-file-upload"></i> File Sharing</a></li>
+              <li><a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
+          </ul>
+      
+      
+      </nav>
+
+    </div>
+    <div class="home" id="home">
+      <div class="container1">
+        <section id="search-bar" class="search-bar">
+          <input type="text" id="search-input" placeholder="検索...">
+          <button onclick="search()">検索</button>
+        </section>
+        
+          <section id="calendar" class="calendar">
+            <!-- <h2>カレンダー</h2> -->
+            <iframe 
+                src="https://calendar.google.com/calendar/embed?src=YOUR_CALENDAR_ID&ctz=Asia/Tokyo"
+                style="border: 0" width="800" height="600" frameborder="0" scrolling="no">
+            </iframe>
+        </section>
+        <section id="todo-calendar" class="to-do-carendar">
+          <div class="todo-container">
+            <p>スケジュール管理</p>
+              <input type="date" id="date-picker">
+              <input type="text" id="task-input" placeholder="予定を入力">
+              <button onclick="addTask()">追加</button>
+          </div>
+          <ul id="task-list"></ul>
+      </section>
+      
+        
+        
+        </div>
+      
+      <div class="container2">
+        <section id="progress-container" class="progress-container">
+          <h2>プロジェクト完成度</h2>
+          <div class="progress-box">
+              <input type="number" id="progress-input" min="0" max="100" value="50">
+              <button onclick="updateProgress()">更新</button>
+              <div class="progress-bar">
+                  <div id="progress-fill" style="width: 50%;">50%</div>
+              </div>
+          </div>
+      </section>
+
+      <section id="bulletin-board" class="bulletin-board">
+        <h2>掲示板</h2>
+        <div class="post-container">
+          <input type="text" id="post-input" placeholder="投稿内容を入力">
+          <button onclick="addPost()">投稿</button>
+        </div>
+        <ul id="post-list"></ul>
+      </section>
+      
+      
+      </div>
+    </div>
+</header>
+
+  <script src="script.js"></script>
+  
+</body>
+</html>
