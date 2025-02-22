@@ -317,12 +317,7 @@ ul#post-list li {
 
 
 
-@media all and (max-width: 768px) {
-  body {
-    background-color: lightgray;
-  }
-}
- {
+@media (max-width: 768px) {
   html {
     font-size: 50%;
   }
